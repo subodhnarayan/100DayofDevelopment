@@ -51,4 +51,33 @@ astrick
 
 
 class Selector
+.classname{}
 
+text align
+left,right,center 
+works on the parent tag
+
+text decoration
+
+mdn topic we will get all the ans
+
+
+fontweight :
+100-900
+
+font style 
+ 
+<font-family>
+    </font-family>
+
+
+    Unit in css
+    96px=1 inch
+     
+
+    font-size 
+
+    line height
+
+    text tranform 
+    uppercase,lowercase,captalize

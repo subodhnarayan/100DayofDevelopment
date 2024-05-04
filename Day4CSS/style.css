@@ -2,9 +2,7 @@ h3{
     color:blueviolet;
 }
 
-p{
-    color:brown
-}
+
 
 button{
     color:red;
@@ -36,4 +34,23 @@ color:aqua
 
 .myclass{
     color:deeppink
+}
+
+p{
+    text-align:center;
+    text-decoration: underline;
+    color:brown;
+}
+
+h1{
+    text-align: center;
+   
+}
+
+a{
+    text-decoration: red,none;
+}
+
+h5{
+    font-weight: 900;
 }

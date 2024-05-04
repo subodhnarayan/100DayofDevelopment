@@ -1,0 +1,54 @@
+html-layout of our webiste
+css-style,colour,design
+js-logic
+
+CSS=Cascading Styele Sheet
+is language used to desribe the style of document
+
+Basic syantax
+
+Selector
+
+h1{
+    colour:red
+}
+
+types of css-style 
+1.Inline
+2.<style>style tag</style>
+3.External stylesheet
+
+
+figmaa:tools used for designing ui
+
+
+foreground:element which we can see we can set the colour
+
+color:red
+
+background
+
+background-color:grey
+
+
+
+colour system
+RGB system  color:rgb(255,0,0);
+Hex system
+
+colors pallte gives combination
+
+selectors
+
+universal selectors
+
+*{}  universal apply to whole webpage
+astrick
+
+{} Element Selector
+
+#idselector {}
+
+
+class Selector
+

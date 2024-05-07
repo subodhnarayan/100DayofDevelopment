@@ -1,4 +1,16 @@
-div{
-    height:500px;
-    width:400px;
+
+#box1{
+    height:1000px;
+    width:1000px;
+    background-color: green;
+    font-size: 10px;;
+}
+
+#box2{
+    height:50px;
+    width:50%;
+    background-color: yellow;
+    margin-left: 10%;
+    font-size: 2em;
+    width:10em;
 }

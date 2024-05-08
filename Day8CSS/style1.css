@@ -1,0 +1,10 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-image: url("tiger.jpg");
+    background-size: cover;
+    color: aliceblue;
+    position:fixed;
+    right:0px;
+    top: 250px;
+}

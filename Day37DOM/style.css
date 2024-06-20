@@ -1,0 +1,12 @@
+.content{
+    height:150px;
+    width:100px;
+    background-color:dodgerblue;
+    color: white;
+    border: 1px solid black;
+
+}
+
+.newclass{
+    background-color: green;
+}

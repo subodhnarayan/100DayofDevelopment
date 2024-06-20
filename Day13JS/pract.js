@@ -15,6 +15,12 @@ const instagram = {
     Bio: "Simply Enginnering Student"
 };
 
+const student = {
+    name: "Subodh",
+    Roll: 5,
+    SEC: 'B'
+}
+
 
 
 console.log(product)
@@ -24,3 +30,5 @@ console.log("123" + 123)
 console.log(instagram)
 
 console.log(typeof instagram["username"])
+
+console.log(student)

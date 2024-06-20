@@ -56,11 +56,11 @@ for (let i = 2; i <= 100; i = i + 2) {
 
 
 
-let lotterynumber = 5;
-let num = prompt("Enter Number")
-do {
-    num = prompt("Enter Number")
-} while (num != lotterynumber);
-console.log("congrutulation you entered correct number");
+// let lotterynumber = 5;
+// let num = prompt("Enter Number")
+// do {
+//     num = prompt("Enter Number")
+// } while (num != lotterynumber);
+// console.log("congrutulation you entered correct number");
 
 

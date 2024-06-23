@@ -1,0 +1,32 @@
+div{
+height: 100px;
+width:100px;
+background-color: aqua;
+color:white;
+border: 1px solid black;
+}
+
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+
+
+.light{
+    background-color: white;
+    color: black;
+}
+
+.red{
+    background-color: red;
+    color: black;
+}
+
+
+
+.blue{
+    background-color: blue;
+    color: black;
+}

@@ -1,0 +1,37 @@
+event in js
+it is used to trigger an event
+
+types
+move events
+keyword events
+form events
+
+making work to do after click is event handaling
+
+
+inline event handling means handling event in html code itself
+
+so we do it using handle
+
+node.event{
+
+}
+
+event handling is done in inline also and javascript file also then then javascript event handling will work
+
+
+Event Object
+which has detail about all event
+
+event is handled two way inline and js
+
+in js we can only define one function
+
+
+Event Listners
+
+
+node
+
+we can use event target
+we can use multiple event listeners

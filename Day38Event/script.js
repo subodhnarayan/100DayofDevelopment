@@ -89,17 +89,3 @@ bx.addEventListener("mouseover", () => {
     }
 });
 
-// let col = "red";
-// let bx = document.querySelector("#bx");
-
-// bx.addEventListener("mouseover", () => {
-//     if (col === "red") {
-//         col = "blue";
-//         document.querySelector("body").classList.add("blue");
-//         document.querySelector("body").classList.remove("red");
-//     } else {
-//         col = "red";
-//         document.querySelector("body").classList.add("red");
-//         document.querySelector("body").classList.remove("blue");
-//     }
-// });

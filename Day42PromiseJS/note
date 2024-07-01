@@ -1,0 +1,56 @@
+chapeter 12
+
+async await>>promoise chains>> callback hell
+
+sysnchoronous
+code execution is sequence
+
+
+asychornous
+
+callback
+
+callback hell
+
+
+//nesting
+
+let age=19;
+
+if(ajjj){
+    if(cond){
+
+    }
+    else{
+
+    }
+}
+else {
+
+}  //nested if else 
+
+
+nested loop
+
+so there may be callback nesting 
+this is callback hell
+
+
+promise help to solve call back hell
+
+promise has three state
+
+pending
+fullfill 
+reject 
+
+
+we only deal with fullfill and reject
+
+promise.then  when prmoise resloved
+promise.catch when promise rejected
+
+
+callback callbackhell chaining
+
+

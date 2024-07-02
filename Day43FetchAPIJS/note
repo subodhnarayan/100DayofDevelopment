@@ -1,0 +1,41 @@
+fetch api
+
+api is system where we sent request and send us the data
+
+
+API:application programming interface
+
+status 200 means got ans
+
+
+
+let promise=fetch(url)    get request
+let promise=fetch(url,[option]) post
+
+
+AJAX is asynchonous js and XML
+JSON- is javascript Object Notation        (AJAX)
+
+
+api send reponse in json format
+and json method is to exract data from json
+
+it give usable data
+
+
+//request and response
+
+request verb
+get
+post
+delete
+put
+
+
+response statues code
+400 invalid request
+404 page not found
+200 request correct 
+
+
+homework to sent post 

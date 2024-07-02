@@ -54,3 +54,11 @@ promise.catch when promise rejected
 callback callbackhell chaining
 
 
+async is wait in any function
+
+await is  use to keep waiting
+
+
+
+//async-await
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h2>Subodh Weather Forecast</h2>
+        <form class="form">
+            <div class="country-detail">
+            <p>Enter Your City Details</p>
+            </div>
+            <div class="dropdown">
+                <div class="country-name">
+                    <p>Country</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/NP/flat/64.png">
+                        <select name="from" id="country">
+                            <!-- <option value="NP" selected>INR</option>
+                            <option value="INR">EUR</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="city-name">
+                    <label for="city">City</label>
+                    <div class="select-container">
+                        <input  type="text" class="city-input" placeholder="Enter city name" />
+                   </div>
+                </div>
+
+            </div>
+            <div class="msg1">Temperature: <span id="temperature">N/A</span></div>
+            <div class="msg2">Pressure: <span id="pressure">N/A</span></div>
+            <div class="msg3">Humidity: <span id="humidity">N/A</span></div>
+            <button type="submit">Get Weather Details</button>
+        </form>
+    </div>
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
+   
+</body>
+</html>

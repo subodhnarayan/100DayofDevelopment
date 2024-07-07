@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        .output { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form>
+        <label for="quantity">Amount:</label>
+        <input type="number" name="quantity" id="quantity" required>
+        
+        <label for="currency">From Currency:</label>
+        <select name="currency" id="currency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        
+        <button class="btn" type="submit">Convert</button>
+    </form>
+    
+    <div class="output">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>Code</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populated with JS -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        console.log("Main.js working");
+
+        const populate = async (value, currency) => {
+            let myStr = "";
+            const url = `https://api.currencyapi.com/v3/latest?apikey=cur_live_poFAR4bvSk3LRKySfgqP3UUxmd0c6YngsObtU90u&base_currency=${currency}`;
+            
+            try {
+                let response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                
+                let rJson = await response.json();
+                document.querySelector(".output").style.display = "block";
+
+                for (let key of Object.keys(rJson.data)) {
+                    myStr += `
+                        <tr>
+                            <td>${key}</td>
+                            <td>${rJson.data[key].code}</td>
+                            <td>${(rJson.data[key].value * value).toFixed(2)}</td>
+                        </tr>`;
+                }
+                
+                document.querySelector("tbody").innerHTML = myStr;
+            } catch (error) {
+                console.error('Error fetching exchange rates:', error);
+                alert('Failed to fetch exchange rates. Please check your API key and try again.');
+            }
+        };
+
+        const btn = document.querySelector(".btn");
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const value = parseFloat(document.querySelector("input[name='quantity']").value);
+            const currency = document.querySelector("select[name='currency']").value;
+            populate(value, currency);
+        });
+    </script>
+</body>
+</html>

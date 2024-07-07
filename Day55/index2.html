@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        .output { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form>
+        <label for="quantity">Amount:</label>
+        <input type="number" name="quantity" id="quantity" required>
+        
+        <label for="fromCurrency">From Currency:</label>
+        <select name="fromCurrency" id="fromCurrency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+
+        <label for="toCurrency">To Currency:</label>
+        <select name="toCurrency" id="toCurrency" required>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+        </select>
+        
+        <button class="btn" type="submit">Convert</button>
+    </form>
+    
+    <div class="output">
+        <p id="result"></p>
+    </div>
+    
+    <script>
+        console.log("Main.js working");
+
+        const populate = async (value, fromCurrency, toCurrency) => {
+            const url = `https://api.currencyapi.com/v3/latest?apikey=cur_live_poFAR4bvSk3LRKySfgqP3UUxmd0c6YngsObtU90u&base_currency=${fromCurrency}&currencies=${toCurrency}`;
+            
+            try {
+                let response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                
+                let rJson = await response.json();
+                const rate = rJson.data[toCurrency].value;
+                const convertedAmount = (rate * value).toFixed(2);
+
+                document.querySelector(".output").style.display = "block";
+                document.getElementById('result').textContent = `${value} ${fromCurrency} is equal to ${convertedAmount} ${toCurrency}`;
+            } catch (error) {
+                console.error('Error fetching exchange rates:', error);
+                alert('Failed to fetch exchange rates. Please check your API key and try again.');
+            }
+        };
+
+        const btn = document.querySelector(".btn");
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const value = parseFloat(document.querySelector("input[name='quantity']").value);
+            const fromCurrency = document.querySelector("select[name='fromCurrency']").value;
+            const toCurrency = document.querySelector("select[name='toCurrency']").value;
+            populate(value, fromCurrency, toCurrency);
+        });
+    </script>
+</body>
+</html>
